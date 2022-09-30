@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <!-- Ejercicio 5
+    Realizar un programa que permita ingresar un número, entre 1 y 12. El programa devuelve el nombre del mes que le corresponda.
+     -->
+
+     <!-- Ejercicio 6
+Crear una variante para el ejercicio 5, para que el programa devuelva la cantidad de días que tiene el mes indicado (se puede agregar al anterior o hacerlo como ejercicio 6). -->
+
+
+<script>
+
+function meses() {
+let n
+n = prompt("Coloca un numero para mostrar el mes", "1 al 12").toLowerCase();
+let meses = ["enero","febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+  
+    document.write("El mes es: " + meses [n-1]);
+  let dias = meses [n-1]
+    switch (dias){
+        case "enero":
+        case "marzo":
+        case "mayo":
+        case "julio":
+        case "agosto":
+        case "octubre":
+        case "diciembre":
+            document.write(" Tiene 31 dias");
+            break;
+        case "febrero":
+            document.write(" Tiene 28 dias o 29 en año bisiesto");
+            break;
+        case "abril":
+        case "junio":
+        case "septiembre":
+        case "noviembre":
+            document.write(" Tiene 30 dias");
+            break;
+    }
+
+}
+
+
+meses();
+
+
+</script>
+
+    
+
+</body>
+</html>

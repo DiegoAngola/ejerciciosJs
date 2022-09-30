@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <!-- Ejercicio 3
+    Realizar un programa para una tienda de coches: 
+    El usuario introduce la marca y el modelo, y el programa indica el descuento correspondiente por pantalla.
+    Si el coche a la venta es un ford fiesta, el descuento es de un 5%. Si el coche a la venta es un ford focus, el descuento es del 10%, cualquier otra marca y/o modelo, descuento 0.  -->
+
+    <script>
+
+        function descuento() {
+
+            document.write("<h2>Elegir una opcion de descuento</h2>","<p>Ford focus, ford fiesta, toyota corolla</p>")
+            let marca, modelo;
+
+            marca = prompt("Ingresa marca del vehiculo").trim().toLowerCase();
+            modelo = prompt("Ingresa modelo del vehiculo").trim().toLowerCase();
+
+
+            if ((marca === "ford") && (modelo === "fiesta")) {
+                document.write("Tienes un descuento del 5 %")
+            }
+            else if ((marca === "ford") && (modelo === "focus")) {
+                document.write("Tienes un descuento del 10%")
+            }
+            else if ((marca === "toyota") && (modelo === "corolla")) {
+                document.write("No hay descuento")
+
+            }
+
+        }
+
+        descuento();
+
+       
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

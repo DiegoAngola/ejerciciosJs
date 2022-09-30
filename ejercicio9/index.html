@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+
+<body>
+    <!-- Ejercicio 9
+Crear un programa, que calcule la temperatura en grados Celsius o en grados Farenheit. Contará con dos inputs, uno para Celsius y otro para Farenheit. De acuerdo donde se ingresa el dato, emite el resultado en el otro, a través del botón “Convertir” -->
+
+
+    <input type="number" name="celcius" id="celcius">
+    <input type="number" name="farenheit" id="farenheit">
+
+    <input type="button" value="Convertir" id="convertir">
+
+    <script>
+
+        document.querySelector("#convertir").setAttribute("onclick", "convertir()")
+
+        function convertir() {
+            let celcius = document.querySelector("#celcius");
+            let farenheit = document.querySelector("#farenheit");
+
+          if (celcius.value.length > 0) {
+                farenheit.value = ((celcius.value * 9 / 5) + 32).toFixed(2);
+            }
+
+            else if (farenheit.value.length > 0){
+
+            celcius.value = ((farenheit.value - 32) * 5/9).toFixed(2);
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

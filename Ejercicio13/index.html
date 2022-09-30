@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+
+
+
+    <!-- Ejercicio 13
+Por seguridad, en los ecommerce es una práctica habitual que una vez guardado el número de tarjeta y confirmado ya no se lo muestre completo, sino solo los últimos dígitos. Ingresar un número de tarjeta de crédito, por input. Usar el método padStart,  y método slice, (buscarlo en internet). Mostrar, en pantalla, los últimos 4 dígitos de la tarjeta, el resto debe ser reemplazado con asteriscos. -->
+
+
+<label for="card">Tarjeta de Debito o Credito</label>
+<input type="number" name="card" id="card">
+
+
+<input type="button" value="Guardar Tarjeta" id="resultado">
+<input type="text" id="cardid" onlyread>
+
+
+
+<script>
+
+document.querySelector("#resultado").setAttribute("onclick","saveCard()")
+
+let card = document.querySelector("#card").value;
+let result = document.querySelector("#cardid");
+
+function saveCard(){
+    
+
+result.value = card.slice(-4).padStart(12,"*");
+
+}
+
+
+</script>
+    
+</body>
+</html>

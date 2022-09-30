@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+
+    <!-- Ejercicio 8
+    Crear una función, que le cambie el color al texto de un párrafo html (escribir algo dentro del párrafo). Deberá haber dos botones, uno que diga Azul y otro que diga Rojo (existen en js, las propiedades style y color, que podrían servir para este caso, averiguar su uso) -->
+    
+
+<p id="letras"> vamos a cambiar el color del texto </p>
+
+<input type="button" value="rojo" id="rojo">
+<input type="button" value="azul" id="azul">
+
+
+<script>
+
+document.querySelector("#rojo").setAttribute("onclick","colorRojo()");
+document.querySelector("#azul").setAttribute("onclick","colorAzul()");
+
+function colorRojo(){
+let parrafo = document.querySelector("#letras");
+parrafo.style.color = "red";
+}
+
+function colorAzul(){
+let parrafo2 = document.querySelector("#letras")
+parrafo2.style.color = "blue";
+
+}
+
+
+</script>
+
+    
+</body>
+</html>

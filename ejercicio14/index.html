@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+</head>
+
+<body>
+    <!-- Ejercicio 14
+Programa que nos diga si un número es par o impar. -->
+
+
+    <input type="number" name="numero" id="number">
+    <input type="button" value="Saber si es par o impar" id="btn">
+    <input type="text" id="result" readonly>
+
+
+    <script>
+        document.querySelector("#btn").setAttribute("onclick", "oper()")
+
+
+        let result = document.querySelector("#result");
+
+        function oper() {
+            let numero = document.querySelector("#number").value;
+            if (numero % 2 == 0) {
+
+                result.value = ("El número " + numero + " es par");
+
+            } else {
+
+                result.value = ("El número " + numero + " es impar");
+            }
+        }
+    </script>
+</body>
+
+</html>

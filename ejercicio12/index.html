@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+<!--     
+    Ejercicio 12
+    Tenemos un listado de 20 países (se cargarán en un array, en tiempo de compilación, es decir, hardcoreados), listar en el documento, o por consola, los que comienzan con “C”. -->
+    
+
+<script>
+
+let paises = ["Argentina", "Peru", "Brasil","Colombia", "Chile", "Mexico", "Venezuela","Panama", "Canada","Estados Unidos", "Camerun","Catar","Bolivia","España","Suecia","Japon","China","Rusia","Islandia","Portugal"];
+console.log(paises.length)
+
+let paisesC = paises.filter(paisess => paisess.includes("C"));
+
+console.log(paisesC)
+
+</script>
+
+</body>
+</html>

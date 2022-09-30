@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Ejercicio 17
+    Bingo!
+    Recibir 3 números de los cuales si son 3 iguales el resultado es el ganador, si son solo 2 iguales el resultado es de segundo puesto y si son todos diferentes damos un premio mínimo: un helado gratis! (lo podés hacer con prompt y console, o con inputs en html, como quieras) -->
+
+ 
+    <input type="button" value="Rollear" id="roll">
+
+    <div id="numbers">
+    <input type="number" class="numeros" id="num1">
+    <input type="number" class="numeros" id="num2">
+    <input type="number" class="numeros" id="num3">
+    </div>
+    
+    <div id="procesado">
+    <input type="button" value="Resultado" id="btn">
+    <input type="text" name="" id="resultado">
+    
+    </div>
+
+
+	
+    
+
+    <script>
+        document.querySelector("#btn").setAttribute("onclick", "resultado()");
+        document.querySelector("#roll").setAttribute("onclick", "rollear()");
+        let numeros, numeros2, numeros3;
+        let num1 = document.querySelector("#num1");
+        let num2 = document.querySelector("#num2");
+        let num3 = document.querySelector("#num3");
+        let result = document.querySelector("#resultado");
+
+
+        function resultado() {
+            
+            if (numeros == numeros2 && numeros == numeros3) {
+                result.value = "WIN";
+            }
+            else if (numeros == numeros2 || numeros == numeros3 || numeros2 == numeros3) {
+                result.value = "SEGUNDO";
+            }
+            else {
+                result.value = "LOST";
+            }
+
+        }
+
+        function rollear(min, max) {
+            // let n1 = document.querySelector("#num1");
+            // let n2 = document.querySelector("#num2");
+            // let n3 = document.querySelector("#num3");
+            numeros = Math.floor(Math.random() * (5 - 0)) + 1;
+            numeros2 = Math.floor(Math.random() * (5 - 0)) + 1;
+            numeros3 = Math.floor(Math.random() * (5 - 0)) + 1;
+            // console.log(numeros)
+
+            num1.value = numeros;
+            num2.value = numeros2;
+            num3.value = numeros3;
+
+            result.value = "";
+        }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

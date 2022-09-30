@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercio 1</title>
+</head>
+
+<body>
+
+    <!-- Ejercicio 1
+    Introducción de 2 números, con “prompt” y que el programa indica cuál es el mayor. 
+    No validamos nada. 
+    Mostramos el resultado con con document.write() en el DOM -->
+
+    <script>
+
+        function ejercicio() {
+            let valor1, valor2;
+
+            valor1 = prompt("ingrese el primer valor");
+            valor2 = prompt("ingrese el segundo valor");
+            let resultado = Math.max(parseFloat(valor1), parseFloat(valor2));
+            document.write("El numero mayor es ", resultado)
+        }
+
+        function main() {
+            ejercicio();
+        }
+
+        main();
+
+    </script>
+
+<!-- Math.max()
+
+La función Math.max() retorna el mayor de cero o más números dados como parámetros de entrada, o NaN si cualquier parámetro no es un número y no puede ser convertido en uno.
+
+Valor retornado
+
+El mayor de los números dados. Si uno o más de los parámetros no puede ser convertido a un número, retorna NaN. El resultado es -Infinity si no se proveen parámetros.  -->
+
+
+
+
+
+
+
+</body>
+
+</html>

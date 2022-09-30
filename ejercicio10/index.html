@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    
+    <!-- Ejercicio 10
+    En este programa, calcularemos el peso ideal, mínimo y máximo. Se ingresará la altura de la persona, y se obtendrán los tres resultados solicitados, para ello tener en cuenta:
+    Peso ideal: Altura X Altura X 21
+    Peso máximo: Altura X Altura X 25
+    Peso mínimo: Altura X Altura X 20
+    Peso máximo y mínimo, darían lugar al Rango de Peso Saludable. Los tres resultados se muestran en pantalla, en una div, o en inputs, según el diseño de pantalla que quieras hacer. -->
+    
+    <label for="altura">Altura</label>
+    <input type="number" id="altura">
+    <input type="button" value="Calcular Peso" id="boton">
+
+    <label for="peso">Peso ideal</label>
+    <input type="text" onlyread id="peso">
+    <label for="pesomax">Peso maximo</label>
+    <input type="text" onlyread id="pesomax">
+    <label for="pasomin">Peso minimo</label>
+    <input type="text" onlyread id="pesomin">
+
+    <script>
+    document.querySelector("#boton").setAttribute("onclick","calcular()");
+    
+   
+
+   
+    function calcular(){
+        let altura = document.querySelector("#altura").value;
+        let peso = document.querySelector("#peso");
+        let pesomax = document.querySelector("#pesomax");
+        let pesomin = document.querySelector("#pesomin");
+
+         peso.value = ((parseFloat(altura) * parseFloat(altura)) * 21).toFixed(2);
+         pesomax.value = ((parseFloat(altura) * parseFloat(altura)) * 25).toFixed(2);
+         pesomin.value = ((parseFloat(altura) * parseFloat(altura)) * 20).toFixed(2);
+    }
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+
+    <!-- Ejercicio 7
+    Crear una función, que calcule el cuadrado de un número natural, el número se ingresará en un input, y con un botón Calcular, emitirá el resultado en div, o en otro input, o label. -->
+    
+
+<input type="number" id="valor" placeholder="Ingresa un valor para saber su cuadrado">
+
+<input type="button" value="calcular" id="calcular">
+
+<input for="resultado" value="" id="resultado" readonly >
+    
+<script>
+
+document.querySelector("#calcular").setAttribute("onclick","calcular()");
+
+function calcular(){
+
+let resultado = document.querySelector("#resultado");
+let valor = parseFloat(document.querySelector("#valor").value);
+
+resultado.value = Math.pow(valor, 2);
+
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>

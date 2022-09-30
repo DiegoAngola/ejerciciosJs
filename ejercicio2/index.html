@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <!-- Ejercicio 2
+Programa que lee tres notas de un alumno, con “prompt”, y calcula el promedio e indica si está reprobado o aprobado (nota promedio mayor o igual a 6). Emite el resultado aprobado o reprobado por pantalla. -->
+
+<script>
+
+function promedio(){
+
+let nota1, nota2, nota3;
+
+nota1 = prompt("Primer lapso");
+nota2 = prompt("Segundo lapso");
+nota3 = prompt("Tercer lapso");
+
+
+let promedio = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) / 3;
+
+document.write("el promedio es ", promedio);
+if (promedio >= 6)
+{
+    alert("Aprobado");
+}
+else {
+    alert("Reprobado")
+}
+
+}
+
+promedio();
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

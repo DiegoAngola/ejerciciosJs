@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Ejercicio 16
+    En una página web,  permitir el ingreso de bitcoin y, dependiendo si el usuario quiere convertir en ethereum o dólar, tiene que utilizar los siguientes valores de cambio: 
+    1 bitcoin = 18,30 ETH y 1 bitcoin  = 19.300,00 USD
+    Finalmente la página muestra el valor recibido y el cambio realizado. -->
+
+
+    <h3>CAMBIO DE BITCOIN</h3>
+
+    <label for="btc">Bitcoin</label>
+    <input type="number" name="btc" id="btc">
+
+    <label for="eth">Ethereum</label>
+    <input type="number" name="eth" id="eth">
+
+    <label for="dolar">Dolar</label>
+    <input type="number" name="usd" id="usd">
+
+    <input type="button" value="Cambiar" id="btn">
+
+    <div>
+        <h4>TASA DE CAMBIO</h4>
+        <table>
+            <tr>
+            <th>BITCOIN</th>
+            <th>ETHEREUM</th>
+            <th>DOLAR</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>18.30</td>
+            <td>19300</td>
+        </tr>
+        </table>
+
+
+    </div>
+
+    <script>
+        document.querySelector("#btn").setAttribute("onclick","cambiar()");
+
+        function cambiar(){
+            let btc = document.querySelector("#btc").value;
+            let resulteth = document.querySelector("#eth");
+            let resultusd = document.querySelector("#usd");
+
+
+            resulteth.value = (btc * 18.30).toFixed(2);
+            resultusd.value = (btc * 19300).toFixed(2);
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

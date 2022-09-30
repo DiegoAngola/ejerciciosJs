@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+
+    <!-- Ejercicio 4
+    Si un alumno es de FP, (preguntamos y el usuario responderá “si o no”)  y tiene más de 18 años, tendrá acceso al portal web. (por pantalla emitimos: Bienvenid@) Si no es de FP o no tiene más de 18 años, NO tiene acceso al portal web. (por pantalla emitimos: No cumple los requisitos mínimos.). -->
+    
+
+<script>
+
+function acceso(){
+let fp = prompt("¿Tienes Formacion Profesional?", "¿ si o no ?").trim().toLowerCase();
+let mayor = prompt("¿Tienes mas de 18 años?", "¿ si o no ?").trim().toLowerCase();
+
+if (fp === "si" && mayor === "si"){
+    document.write("Bienvenid@")
+}
+else if (fp === "no" && mayor === "no"){
+    document.write("No cumple los requisitos minimos.")
+}
+else {
+    document.write("Debes responder las preguntas para acceder.")
+}
+}
+
+acceso();
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+    
+</body>
+</html>
